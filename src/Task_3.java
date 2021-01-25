@@ -17,5 +17,23 @@ public class Task_3 {
         }
 
         System.out.println(Arrays.toString(mass));
+
+        System.out.println("Введите искаемый элемент:");
+
+        int searchValue = scanner.nextInt();
+        boolean resSearch = false;
+
+        for (int i=0; i<mass.length; i++) {
+            if (mass[i] == searchValue) {
+                resSearch = true;
+                break;
+            }
+        }
+
+        if (resSearch) {
+            System.out.println("В масиве существует такой элемент");
+        } else {
+            System.out.println("В масиве нет такого элемент");
+        }
     }
 }
